@@ -31,7 +31,7 @@ Even if there's an `errorLoadRemote` hook configured for the [host](./packages//
 ```js
 export default function () {
     return {
-        name: "create-script-with-timeout",
+        name: "custom-runtime-plugin",
         async beforeRequest(args) {
             console.log("*********beforeRequest", args);
 

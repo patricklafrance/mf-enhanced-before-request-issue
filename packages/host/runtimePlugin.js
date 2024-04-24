@@ -1,6 +1,6 @@
 export default function () {
     return {
-        name: "create-script-with-timeout",
+        name: "custom-runtime-plugin",
         async beforeRequest(args) {
             console.log("*********beforeRequest", args);
 

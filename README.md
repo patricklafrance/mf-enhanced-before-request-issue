@@ -1,5 +1,7 @@
 # mf-enhanced-before-request-issue
 
+Related to the following issue: https://github.com/module-federation/universe/issues/2371.
+
 The monorepo contains 3 applications:
 - An [host application](./packages/host/)
 - A remote module named [remote-1](./packages/remote-1/)

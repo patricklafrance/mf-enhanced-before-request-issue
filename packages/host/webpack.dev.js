@@ -46,34 +46,34 @@ export default {
         ]
     },
     plugins: [
-        new ModuleFederation.ModuleFederationPlugin({
-            name: "host",
-            remotes: {
-                "remote1": "remote1@http://localhost:8081/remoteEntry.js",
-                "remote2": "remote2@http://localhost:8082/remoteEntry.js"
+    new ModuleFederation.ModuleFederationPlugin({
+        name: "host",
+        remotes: {
+            "remote1": "remote1@http://localhost:8081/remoteEntry.js",
+            "remote2": "remote2@http://localhost:8082/remoteEntry.js"
+        },
+        shared: {
+            "react": {
+                singleton: true,
+                eager: true
             },
-            shared: {
-                "react": {
-                    singleton: true,
-                    eager: true
-                },
-                "react-dom": {
-                    singleton: true,
-                    eager: true
-                },
-                "lodash": {
-                    singleton: true,
-                    eager: true
-                },
-                "useless-lib": {
-                    singleton: true,
-                    eager: true
-                }
+            "react-dom": {
+                singleton: true,
+                eager: true
             },
-            runtimePlugins: [
-                require.resolve("./runtimePlugin.js")
-            ]
-        }),
+            "lodash": {
+                singleton: true,
+                eager: true
+            },
+            "useless-lib": {
+                singleton: true,
+                eager: true
+            }
+        },
+        runtimePlugins: [
+            require.resolve("./runtimePlugin.js")
+        ]
+    }),
         new HtmlWebpackPlugin({
             template: "./public/index.html"
         }),

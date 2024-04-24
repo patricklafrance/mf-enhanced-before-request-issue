@@ -1,0 +1,17 @@
+{
+  "name": "mf-enhanced-before-request-issue",
+  "version": "1.0.0",
+  "description": "Showcase that mf enhanced errorLoadRemote hook doesn't handles error thrown from the beforeRequest hook.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "reset": "pnpm run \"/^reset:.*/\"",
+    "reset:node-modules": "pnpm -r --include-workspace-root --parallel exec pnpm dlx rimraf node_modules",
+    "reset:lock-file": "pnpm dlx rimraf pnpm-lock.yaml",
+    "list-outdated-deps": "pnpm outdated -r --format list !eslint",
+    "update-outdated-deps": "pnpm update -r --latest !eslint"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
